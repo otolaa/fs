@@ -64,7 +64,7 @@ class LinksModel
         if (!$url)
             return false;
 
-        $slug = crc32($url);
+        $slug = $this->gen_password(6);
         $sql = "INSERT INTO $this->table (slug, url) VALUES(:slug, :url)";
         $stmt = $this->conn->prepare($sql);
         $stmt->execute([
@@ -82,6 +82,17 @@ class LinksModel
         $stmt->execute([':id'=>$id]);
 
         return true;
+    }
+
+    public function gen_password($length = 6)
+    {
+        $chars = 'qazxswedcvfrtgbnhyujmkiolp1234567890QAZXSWEDCVFRTGBNHYUJMKIOLP';
+        $size = strlen($chars) - 1;
+        $password = '';
+        while($length--)
+            $password .= $chars[random_int(0, $size)];
+
+        return $password;
     }
 
 }
