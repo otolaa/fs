@@ -1,7 +1,7 @@
 <div class="row">
 <div class="col-12">
 
-    <form action="/link_add" method="POST">
+    <form action="/link_add" method="POST" class="SubmitFormAjax">
         <div class="input-group input-group-lg mb-4">
             <span class="input-group-text" id="inputGroup-sizing-lg">
                 <i class="bi bi-arrow-right-circle-fill"></i>
@@ -14,7 +14,7 @@
     <?php if (count($link) && is_array($link)) : ?>
     <div class="list-group mb-4">
         <?php foreach ($link as $item) : ?>
-            <a href="/<?=$item['slug']?>" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+            <a href="/<?=$item['slug']?>" target="_blank" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
                 <i class="bi bi-bullseye fs-4 flex-shrink-0"></i>
                 <div class="d-flex gap-2 w-100 justify-content-between">
                     <div>

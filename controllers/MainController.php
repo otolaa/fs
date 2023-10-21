@@ -33,7 +33,6 @@ class MainController
         $l = new LinksModel();
         $link = $l->getItemBySlug($slug);
 
-        //$this->renderJson($link);
         $this->location($link['url']);
 
         return true;
@@ -46,7 +45,11 @@ class MainController
             $url = htmlspecialchars($_POST['add_you_url']);
 
             $l = new LinksModel();
-            $link_ = $l->addItem($url);
+            try {
+                $link_ = $l->addItem($url);
+            } catch (\Exception $e) {
+                $link_['error'] = $e->getMessage();
+            }
 
             $this->renderJson($link_);
         }
