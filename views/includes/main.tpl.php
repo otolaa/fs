@@ -31,7 +31,7 @@
     <?php endif; ?>
 
     <?php if (count($news) && is_array($news)) : ?>
-    <div class="list-group" id="news_list">
+    <div class="list-group mb-4" id="news_list">
         <?php foreach ($news as $item) : ?>
         <a href="/news/<?=$item['id']?>" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
             <i class="bi bi-chat-right-quote-fill fs-4 flex-shrink-0"></i>
@@ -46,5 +46,6 @@
         <?php endforeach; ?>
     </div>
     <?php endif; ?>
+
 </div>
 </div>

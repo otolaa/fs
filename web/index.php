@@ -13,8 +13,8 @@ require_once (DIR_ROOT.'/components/Skin.php');
 
 // 2.0 - db postgres
 require_once (DIR_ROOT.'/database/Connection.php');
-include_once (DIR_ROOT.'/models/NewsModel.php');
-include_once (DIR_ROOT.'/models/LinksModel.php');
+require_once (DIR_ROOT.'/models/NewsModel.php');
+require_once (DIR_ROOT.'/models/LinksModel.php');
 
 // 3.0 - return router
 $router = new Router();
