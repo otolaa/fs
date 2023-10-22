@@ -12,7 +12,7 @@ spl_autoload_register(function ($class)
     ];
 
     foreach ($arr_path as $path) {
-        $path_class = __DIR__.'/..'.$path.$class_name.'.php';
+        $path_class = DIR_ROOT.$path.$class_name.'.php';
         if (is_file($path_class))
             include_once $path_class;
     }

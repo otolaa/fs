@@ -34,6 +34,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="/">Main</a></li>
                     <li class="nav-item"><a class="nav-link" href="/news">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://github.com/otolaa/fs" target="_blank"><i class="bi bi-github"></i></a></li>
                 </ul>
             </div>
         </div>

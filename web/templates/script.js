@@ -1,9 +1,9 @@
 $(document).ready(function () {
     /* the submit forms */
-    $(document).on("submit", "form.SubmitFormAjax", addFormSubmitNew);
+    $(document).on("submit", "form.SubmitFormAjax", getFormSubmitAjax);
 });
 
-const addFormSubmitNew = function (event) {
+const getFormSubmitAjax = function (event) {
     event.preventDefault();
     var form_ =  $(this);
 
