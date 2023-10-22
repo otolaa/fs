@@ -19,12 +19,12 @@ const addFormSubmitNew = function (event) {
         success: function (res) {
             if (res.id) {
                 let jsn = JSON.stringify(res, undefined, 2);
-                clickModal(res.slug, '<pre>'+jsn+'</pre>');
-                console.log(jsn);
+                clickModal(res.slug, `<pre>${jsn}</pre>`);
+                dump(res);
             }
 
             if (res.error) {
-                console.log(JSON.stringify(res,undefined, 2));
+                dump(res);
             }
 
             form_.trigger("reset");
@@ -39,8 +39,14 @@ const addFormSubmitNew = function (event) {
 
 const clickModal = (title, body) => {
     var popup = document.getElementById('popupModal');
-    $(popup).find('h1').html(title);
-    $(popup).find('div.modal-body').html(body);
+
+    popup.querySelector('h1').innerHTML = title;
+    popup.querySelector('div.modal-body').innerHTML = body;
+
     var myModal = new bootstrap.Modal(popup);
     myModal.show();
+}
+
+const dump = (res) => {
+    console.log(JSON.stringify(res,undefined, 2));
 }

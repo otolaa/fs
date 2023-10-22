@@ -22,7 +22,7 @@
 <div id="app">
     <nav class="navbar navbar-expand-md shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="/"><i class="bi bi-braces-asterisk me-1"></i> Fs <sup>0.0.2</sup></a>
+            <a class="navbar-brand" href="/"><i class="bi bi-braces-asterisk me-1"></i> Fs <sup><?=V_FS?></sup></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="">
                 <span class="navbar-toggler-icon"></span>
             </button>

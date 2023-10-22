@@ -1,4 +1,4 @@
-<?php
+<?php define('V_FS', '0.0.3');
 
 use Html\Components\Router;
 
@@ -8,13 +8,10 @@ error_reporting(E_ALL);
 
 // 1.0 - include files
 define('DIR_ROOT', __DIR__.'/..');
-require_once (DIR_ROOT.'/components/Router.php');
-require_once (DIR_ROOT.'/components/Skin.php');
+require_once (DIR_ROOT.'/components/Autoload.php');
 
 // 2.0 - db postgres
 require_once (DIR_ROOT.'/database/Connection.php');
-require_once (DIR_ROOT.'/models/NewsModel.php');
-require_once (DIR_ROOT.'/models/LinksModel.php');
 
 // 3.0 - return router
 $router = new Router();
