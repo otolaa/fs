@@ -6,6 +6,9 @@ use Html\Components\Router;
 ini_set('display_errors',1);
 error_reporting(E_ALL);
 
+// 0.1 - for user
+session_start();
+
 // 1.0 - include files
 define('DIR_ROOT', __DIR__.'/..');
 require_once (DIR_ROOT.'/components/Autoload.php');
